@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Atharva Maid</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar-nav li{
+          padding-right: .7rem;
+          font-size: 20px;
+          padding-left: .5rem;
+        }
+        .navbar-nav li a{
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          transition: 1s ease;
+        }
+        .navbar-nav li a:hover{
+          border-bottom: 2px solid slategray;
+          transition: 1s ease;
+        }
+        .navbar-brand{
+          font-size: 25px;
+        }
+       
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <nav class="navbar navbar-expand-md bg-light navbar-light sticky-top">
+      <div class="container-fluid">
+      <a href="#" class="navbar-brand text-secondary"><b>B</b>unk-<b>O</b>-<b>M</b>eter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navres">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id=navres>
+        <ul class="navbar-nav ml-auto " >
+          <li class="nav-item  active">
+            <a href="#" class="nav-link pr-3">Home</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link pr-3">Contact</a>
+          </li>
+          <li class="nav-item ">
+            <a href="#" class="nav-link pr-3">about</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </nav>
+    <div class="jumbotron-fluid pt-3 mt-3">
+      <div class="row">
+        <div class="col-6 jumbotron">
+          <h1>The Bunk-O-Meter:</h1>
+          <p>uses bunking algorithm to find the lectures you need to attend in order to maintain 75 % attendace.
+
+          </p>
+        </div>
+        <div class="col-6 jumbotron border ">
+          <div class="form">
+            <div class="form-group ">
+              <label for="tlc">Enter total lectures conducted</label>
+              <input type="text" class="form-control" name="tolc" id="tlc" placeholder="lectures conducted" >
+            </div>
+            <div class="form-group">
+              <label for="la">Enter total lectures attended</label>
+              <input type="text" class="form-control" name="tla" id="la" placeholder="lectures attended" >
+            </div>
+            <button class="btn btn-primary" onclick="myfunc()">Calculate</button>
+          </div>
+          <h6 id="answer" class="pt-2"></h6>
+        </div>
+        </div>
+    </div>
+
+    <div class=" jumbotron jumbotron-fluid text-center pt-3 mt-3">
+      <h1>Thank You</h1>
+      <p>The next time when you are worried about your attendance ,just Bunk-O-Meter !</p>
+    </div>
+
+    <script>
+      function myfunc(){
+        var M=document.getElementById("tlc").value;
+        var N=document.getElementById("la").value;
+        var x=3*parseInt(M)-4*parseInt(N);
+
+          if(x<0){
+            document.getElementById("answer").innerHTML="Chill dude your attendance is above 75% " ;
+
+          }
+          else{
+            document.getElementById("answer").innerHTML="the no of lectures you need to attend is " + x;
+
+          }
+      }
+    </script>
+
+    
+  </body>
+</html>
